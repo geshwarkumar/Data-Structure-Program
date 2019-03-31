@@ -1,0 +1,43 @@
+/*Program to implement the bubble sort
+-Geshwar Kumar
+-15/01/2016*/
+
+void main()
+{       	//main function open
+	int arr[10],iter,j,temp;
+	clrscr();
+
+	/*Input opearation*/
+	printf("\n Enter the 10 elements :");
+	for(iter=0;iter<10;iter++)
+	{
+		scanf("%d",&arr[iter]);
+	}
+
+	/*Output operation*/
+	printf("\n Before sorting elements are :\n");
+	for(iter=0;iter<10;iter++)
+	{
+		printf("%3d",arr[iter]);
+	}
+	/*Sorting method using bubble sort*/
+	for(iter=0;iter<10;iter++)
+	{
+		for(j=0;j<9;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+		}
+	}
+	/*Output operation for before sorting*/
+	printf("\n After sorting elements are :\n");
+	for(iter=0;iter<10;iter++)
+	{
+		printf("%3d",arr[iter]);
+	}
+getch();
+}	//End main function
